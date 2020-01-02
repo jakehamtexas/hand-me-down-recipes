@@ -1,0 +1,4 @@
+Make this into a node module
+Test CRUD ops
+Write .env file
+Add Mongo to Dockerfile
