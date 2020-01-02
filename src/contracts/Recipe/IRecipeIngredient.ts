@@ -1,6 +1,6 @@
 import { RecipeIngredientUnit } from './RecipeIngredientUnit';
 import { RecipeIngredientSeason } from './RecipeIngredientSeason';
-export interface RecipeIngredient {
+export interface IRecipeIngredient {
   quantity: number;
   unit: RecipeIngredientUnit;
   name: string;

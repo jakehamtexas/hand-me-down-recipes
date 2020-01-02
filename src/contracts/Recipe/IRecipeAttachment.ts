@@ -1,5 +1,5 @@
 import { RecipeAttachmentType } from './RecipeAttachmentType';
-export interface RecipeAttachment {
+export interface IRecipeAttachment {
   type: RecipeAttachmentType;
   fileName: string;
   filePath: string;

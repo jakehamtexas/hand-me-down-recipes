@@ -1,5 +1,5 @@
 import Express from 'express';
-import RecipeManager from './RecipeManager';
+import RecipeManager from '../managers/RecipeManager';
 const setRoutes = (app: Express.Application) => {
   app.post('/v1/recipe', async (req, _res) => {
     const recipe = req.body.recipe;
@@ -16,6 +16,9 @@ const setRoutes = (app: Express.Application) => {
   app.delete('/v1/recipe', async (req, _res) => {
     const recipe = req.body.recipe;
     RecipeManager.destroy(recipe);
+  });
+  app.get('/v1/test', async (_req, _res) => {
+    await RecipeManager.test();
   });
 };
 

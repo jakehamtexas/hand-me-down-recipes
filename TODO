@@ -1,4 +1,2 @@
-Make this into a node module
-Test CRUD ops
-Write .env file
-Add Mongo to Dockerfile
+Add types (tightly coupled to client) to a node module (e.g. enums, interfaces)
+Test delete endpoint

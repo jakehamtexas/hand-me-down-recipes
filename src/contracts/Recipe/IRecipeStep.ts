@@ -1,4 +1,4 @@
-export interface RecipeStep {
+export interface IRecipeStep {
   index: number;
   description: string | null;
 }

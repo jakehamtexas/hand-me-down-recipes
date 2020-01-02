@@ -1,1 +1,1 @@
-export interface RecipeIngredientSeason {}
+export enum RecipeIngredientSeason {}

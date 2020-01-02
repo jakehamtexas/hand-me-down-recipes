@@ -1,9 +1,10 @@
-import { RecipeIngredient } from './RecipeIngredient';
-import { RecipeStep } from './RecipeStep';
-import { RecipeAttachment } from './RecipeAttachment';
+import { IRecipeIngredient } from './IRecipeIngredient';
+import { IRecipeStep } from './IRecipeStep';
+import { IRecipeAttachment } from './IRecipeAttachment';
+import { IRecipe } from './IRecipe';
 
-import { prop, Typegoose } from 'typegoose';
-export class Recipe extends Typegoose {
+import { prop, Typegoose } from '@hasezoey/typegoose';
+export class Recipe extends Typegoose implements IRecipe {
   @prop({ required: true })
   recipeName?: string;
   @prop()
@@ -11,11 +12,11 @@ export class Recipe extends Typegoose {
   @prop()
   notes?: string;
   @prop()
-  ingredients?: Array<RecipeIngredient> | null;
+  ingredients?: Array<IRecipeIngredient> | null;
   @prop()
-  steps?: Array<RecipeStep> | null;
+  steps?: Array<IRecipeStep> | null;
   @prop()
-  attachments?: Array<RecipeAttachment> | null;
+  attachments?: Array<IRecipeAttachment> | null;
   @prop()
   id?: any;
 }

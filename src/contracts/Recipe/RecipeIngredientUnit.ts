@@ -1,1 +1,1 @@
-export interface RecipeIngredientUnit {}
+export enum RecipeIngredientUnit {}
