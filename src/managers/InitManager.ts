@@ -55,13 +55,24 @@ const getDefaultIRecipe = (): IRecipe => {
   stub.steps = steps;
   return stub;
 };
+
+const getEnumKeyValuePairs = (enumObject: {}): object =>
+  Object.entries(enumObject)
+    .filter(entry => isNaN(Number(entry[0])))
+    .reduce(
+      (obj, entry) => ({
+        ...obj,
+        [entry[0]]: entry[1]
+      }),
+      {}
+    );
 class InitManager {
   public anhydrousModels(): any {
     return {
       recipe: {
-        RecipeAttachmentType,
-        RecipeIngredientSeason,
-        RecipeIngredientUnit,
+        RecipeAttachmentType: getEnumKeyValuePairs(RecipeAttachmentType),
+        RecipeIngredientSeason: getEnumKeyValuePairs(RecipeIngredientSeason),
+        RecipeIngredientUnit: getEnumKeyValuePairs(RecipeIngredientUnit),
         IRecipe: getDefaultIRecipe()
       }
     };
