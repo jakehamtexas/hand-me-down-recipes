@@ -1,1 +1,3 @@
-export enum RecipeAttachmentType {}
+export enum RecipeAttachmentType {
+  jpg
+}

@@ -4,9 +4,10 @@ import { IRecipeAttachment } from './IRecipeAttachment';
 import { IRecipe } from './IRecipe';
 
 import { prop, Typegoose } from '@hasezoey/typegoose';
+import { IEquipment } from './IEqupiment';
 export class Recipe extends Typegoose implements IRecipe {
   @prop({ required: true })
-  recipeName?: string;
+  name?: string;
   @prop()
   description?: string;
   @prop()
@@ -19,4 +20,6 @@ export class Recipe extends Typegoose implements IRecipe {
   attachments?: Array<IRecipeAttachment> | null;
   @prop()
   id?: any;
+  @prop()
+  equipment?: Array<IEquipment> | null;
 }

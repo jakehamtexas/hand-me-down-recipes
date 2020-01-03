@@ -1,1 +1,3 @@
-export enum RecipeIngredientSeason {}
+export enum RecipeIngredientSeason {
+  summer
+}
