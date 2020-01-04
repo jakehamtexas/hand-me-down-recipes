@@ -3,12 +3,18 @@ import {
   IRecipe,
   IEquipment,
   IRecipeAttachment,
-  IRecipeIngredient,
   IRecipeStep,
-  RecipeIngredientSeason,
-  Recipe,
-  RecipeIngredientUnit
+  Recipe
 } from '../contracts/Recipe';
+import {
+  IRecipeIngredient,
+  RecipeIngredientSeason,
+  RecipeIngredientUnitType,
+  RecipeIngredientImperialVolumeUnit,
+  RecipeIngredientImperialWeightUnit,
+  IIngredientUnit,
+  RecipeIngredientMetricVolumeUnit
+} from '../contracts/Recipe/Ingredient';
 
 const getDefaultIRecipe = (): IRecipe => {
   const stub: Recipe = new Recipe();
@@ -31,7 +37,10 @@ const getDefaultIRecipe = (): IRecipe => {
   ];
   stub.equipments = equipment;
   stub.id = null;
-  const ingredientUnit: RecipeIngredientUnit = RecipeIngredientUnit.tsp;
+  const ingredientUnit: IIngredientUnit = {
+    type: RecipeIngredientUnitType.VolumeImperial,
+    value: RecipeIngredientImperialVolumeUnit.Teaspoon
+  };
   const ingredientSeason: RecipeIngredientSeason =
     RecipeIngredientSeason.summer;
   const ingredients: Array<IRecipeIngredient> = [
@@ -72,7 +81,21 @@ class InitManager {
       recipe: {
         RecipeAttachmentType: getEnumKeyValuePairs(RecipeAttachmentType),
         RecipeIngredientSeason: getEnumKeyValuePairs(RecipeIngredientSeason),
-        RecipeIngredientUnit: getEnumKeyValuePairs(RecipeIngredientUnit),
+        RecipeIngredientUnitType: getEnumKeyValuePairs(
+          RecipeIngredientUnitType
+        ),
+        RecipeIngredientImperialVolumeUnit: getEnumKeyValuePairs(
+          RecipeIngredientImperialVolumeUnit
+        ),
+        RecipeIngredientImperialWeightUnit: getEnumKeyValuePairs(
+          RecipeIngredientImperialWeightUnit
+        ),
+        RecipeIngredientMetricVolumeUnit: getEnumKeyValuePairs(
+          RecipeIngredientMetricVolumeUnit
+        ),
+        RecipeIngredientImperialWeightUnit: getEnumKeyValuePairs(
+          RecipeIngredientImperialWeightUnit
+        ),
         IRecipe: getDefaultIRecipe()
       }
     };

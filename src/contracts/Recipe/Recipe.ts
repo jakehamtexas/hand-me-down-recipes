@@ -1,4 +1,4 @@
-import { IRecipeIngredient } from './IRecipeIngredient';
+import { IRecipeIngredient } from './Ingredient/';
 import { IRecipeStep } from './IRecipeStep';
 import { IRecipeAttachment } from './IRecipeAttachment';
 import { IRecipe } from './IRecipe';

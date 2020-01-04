@@ -1,6 +1,6 @@
 import { IDocumentable } from '../Entity/IDocumentable';
 import { IRecipeAttachment } from './IRecipeAttachment';
-import { IRecipeIngredient } from './IRecipeIngredient';
+import { IRecipeIngredient } from './Ingredient';
 import { IRecipeStep } from './IRecipeStep';
 import { IEquipment } from './IEqupiment';
 
