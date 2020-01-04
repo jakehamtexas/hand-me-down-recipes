@@ -7,9 +7,9 @@ import { IEquipment } from './IEqupiment';
 export interface IRecipe extends IDocumentable {
   name?: string;
   description?: string;
-  notes?: string;
+  note?: string;
   ingredients?: Array<IRecipeIngredient> | null;
   steps?: Array<IRecipeStep> | null;
   attachments?: Array<IRecipeAttachment> | null;
-  equipment?: Array<IEquipment> | null;
+  equipments?: Array<IEquipment> | null;
 }

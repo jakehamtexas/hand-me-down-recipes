@@ -11,7 +11,7 @@ export class Recipe extends Typegoose implements IRecipe {
   @prop()
   description?: string;
   @prop()
-  notes?: string;
+  note?: string;
   @prop()
   ingredients?: Array<IRecipeIngredient> | null;
   @prop()
@@ -21,5 +21,5 @@ export class Recipe extends Typegoose implements IRecipe {
   @prop()
   id?: any;
   @prop()
-  equipment?: Array<IEquipment> | null;
+  equipments?: Array<IEquipment> | null;
 }

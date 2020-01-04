@@ -29,7 +29,7 @@ const getDefaultIRecipe = (): IRecipe => {
       quantity: 0
     }
   ];
-  stub.equipment = equipment;
+  stub.equipments = equipment;
   stub.id = null;
   const ingredientUnit: RecipeIngredientUnit = RecipeIngredientUnit.tsp;
   const ingredientSeason: RecipeIngredientSeason =
@@ -45,7 +45,7 @@ const getDefaultIRecipe = (): IRecipe => {
   ];
   stub.ingredients = ingredients;
   stub.name = '';
-  stub.notes = '';
+  stub.note = '';
   const steps: Array<IRecipeStep> = [
     {
       index: -1,
