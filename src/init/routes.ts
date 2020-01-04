@@ -37,7 +37,7 @@ const setInitRoutes = (app: Express.Application) => {
   app.get('/v1/init', async (_req, res) => {
     const anhydrousModels = InitManager.anhydrousModels();
     const initData = {
-      anhydrousModels
+      ...anhydrousModels
     };
     res.send(initData);
   });
