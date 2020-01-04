@@ -7,7 +7,7 @@ class RecipeManager {
   public async create(recipe: IRecipe): Promise<IRecipe> {
     const entity = new RecipeEntity(recipe);
     const document = await entity.save();
-    return getAsAnemicModel(Recipe, document.toObject());
+    return getAsAnemicModel(Recipe, document.toObject()).id;
   }
   public async list(): Promise<Array<IRecipe>> {
     const entities = await RecipeEntity.find({});

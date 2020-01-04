@@ -8,9 +8,10 @@ const setRoutes = (app: Express.Application) => {
 };
 
 const setRecipeRoutes = (app: Express.Application) => {
-  app.post('/v1/recipe', async (req, _res) => {
+  app.post('/v1/recipe', async (req, res) => {
     const recipe = req.body.recipe;
-    await RecipeManager.create(recipe);
+    const id = await RecipeManager.create(recipe);
+    res.send(id);
   });
   app.get('/v1/recipe', async (_req, res) => {
     const recipes = await RecipeManager.list();
