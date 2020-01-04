@@ -15,6 +15,7 @@ export const initServer = () => {
 
   app.set('port', port);
   app.use(cors());
+  app.use(Express.json());
   setRoutes(app);
   initDatabase();
 
